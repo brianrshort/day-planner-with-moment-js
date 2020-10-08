@@ -1,15 +1,23 @@
-console.log(moment().format("h"));
-
+//Let's get started
 $(document).ready(function() {
 
+  //Create a constant to rep
   const now = moment().format("MMM DD YYYY");
   let $todaysDate = $('#todays-date');
      $todaysDate.text(now);
 
+  let planTextArr;
+  let storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
+     if (storedPlans !== null) {
+         planTextArr = storedPlans;
+       } else {
+         planTextArr = new Array(10);
+         planTextArr[4] = "Picnic lunch outside";
+  }
 
   for (let timeOfDay = 8; timeOfDay <= 18; timeOfDay++) {
     let displayHour;
-    let rowIndex = timeOfDay - 8;
+    let index = timeOfDay - 8;
 
     if (timeOfDay <= 12) {
       displayHour = timeOfDay;
@@ -19,17 +27,21 @@ $(document).ready(function() {
 
     let $rowDiv = $('<div>');
     $rowDiv.addClass("row diary-row");
+    $rowDiv.attr('hour-index', timeOfDay);
 
     let $colDiv1 = $('<div>');
     $colDiv1.addClass("col-2 time-div");
+    
+    let $timeDiv = $('<div>');
+    $timeDiv.addClass("time-div");
     if (moment().format("H") < timeOfDay) {
-      $colDiv1.addClass("time-before");
+      $timeDiv.addClass("time-before");
     } else if (moment().format("H") === `${timeOfDay}`) {
-      $colDiv1.addClass("time-now");
+      $timeDiv.addClass("time-now");
     } else if (moment().format("H") > timeOfDay) {
-      $colDiv1.addClass("time-ahead");
+      $timeDiv.addClass("time-ahead");
     }
-    $colDiv1.text(`${displayHour} o'clock`);
+    $timeDiv.text(`${displayHour} o'clock`);
 
 
 
@@ -39,13 +51,19 @@ $(document).ready(function() {
     $colDiv2.attr("name" , "Have fun");
 
 
-    let $colDiv3 = $('<div>');
-    $colDiv3.addClass("col-1 submit-div");
-    let saveIcon = '<i class="far fa-save fa-5x"></i>';
-    $colDiv3.html(saveIcon);
+    let $colDiv3 = $('<img>');
+    $colDiv3.addClass("col-1 p-0");
+    $colDiv3.attr('id',`saveid-${index}`);
+    $colDiv3.attr('save-id', index);
+    $colDiv3.attr("src" , "Assets/Save4.jpg")
+    
+
+
 
     $("#plannerContainer").append($rowDiv);
     $rowDiv.append($colDiv1, $colDiv2, $colDiv3);
+    $colDiv1.append($timeDiv);
+   
 
   }
 
@@ -53,9 +71,9 @@ $(document).ready(function() {
      event.preventDefault();
       console.log(event.currentTarget.value);
     //   let inputField = $("textarea").value;
-  //   localStorage.setItem("diary-entry", inputField);
-  //   console.log(inputField);
-  //   console.log(localStorage.getItem("diary-entry"));
+    //   localStorage.setItem("diary-entry", inputField);
+    //   console.log(inputField);
+    //   console.log(localStorage.getItem("diary-entry"));
    })
 
 

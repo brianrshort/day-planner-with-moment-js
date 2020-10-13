@@ -10,10 +10,9 @@ local storage as well as a chance to rep with official MSU colors.
 
 See more of MSU's official brand colors at: https://brand.msu.edu/design-visual/#:~:text=Primary%20Colors,colors%20are%20green%20and%20white.
 
-Repo link: TBD
+Repo link: https://github.com/brianrshort/day-planner-with-moment-js 
 Web link: TBD
 
-Image/gif placeholder
 
 # Original Assignment
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.

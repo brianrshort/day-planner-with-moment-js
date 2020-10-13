@@ -11,7 +11,7 @@ local storage as well as a chance to rep with official MSU colors.
 See more of MSU's official brand colors at: https://brand.msu.edu/design-visual/#:~:text=Primary%20Colors,colors%20are%20green%20and%20white.
 
 Repo link: https://github.com/brianrshort/day-planner-with-moment-js 
-Web link: TBD
+Web link: https://brianrshort.github.io/day-planner-with-moment-js/
 
 
 # Original Assignment

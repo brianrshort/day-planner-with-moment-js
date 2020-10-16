@@ -16,7 +16,7 @@ Web link: https://brianrshort.github.io/day-planner-with-moment-js/
 
 Image:
 
-![Screenshot of the website](https://brianrshort.github.io/day-planner-with-moment-js/Assets/Example.jpg)
+![Screenshot of the website](https://brianrshort.github.io/day-planner-with-moment-js/Assets/Exampple.jpg)
 
 # Original Assignment
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.

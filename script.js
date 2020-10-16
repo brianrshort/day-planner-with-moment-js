@@ -58,17 +58,18 @@ $(document).ready(function() {
     
     let $timeDiv = $('<div>');
     $timeDiv.addClass("time-div");
-    if (moment().format("H") < timeOfDay) {
-      $timeDiv.addClass("time-before");
-    } else if (moment().format("H") === `${timeOfDay}`) {
-      $timeDiv.addClass("time-now");
-    } else if (moment().format("H") > timeOfDay) {
-      $timeDiv.addClass("time-ahead");
-    }
+    
     $timeDiv.text(`${displayHour} o'clock`);
 
     let $colDiv2 = $('<input>');
     $colDiv2.addClass("col-6");
+    if (moment().format("H") < timeOfDay) {
+      $colDiv2.addClass("time-before");
+    } else if (moment().format("H") === `${timeOfDay}`) {
+      $colDiv2.addClass("time-now");
+    } else if (moment().format("H") > timeOfDay) {
+      $colDiv2.addClass("time-ahead");
+    }
     $colDiv2.attr("type" , "text");
     $colDiv2.attr("id" , `input-${timeOfDay}`);
     $colDiv2.attr("value" , localStorage.getItem(`plannerEntry${timeOfDay}`));

@@ -111,6 +111,18 @@ body {
     padding-top: 20px;
   }
 
+  .time-before {
+    background-color: #909ab7;
+  }
+
+  .time-now {
+    background-color:#6E005F;
+  }
+
+  .time-ahead {
+    background-color:#F08521;
+  }
+
 
   /*Light green #0DB14B
   Gray #97A2A2

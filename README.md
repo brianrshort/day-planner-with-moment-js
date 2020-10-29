@@ -14,6 +14,8 @@ Repo link: https://github.com/brianrshort/day-planner-with-moment-js
 
 Web link: https://brianrshort.github.io/day-planner-with-moment-js/
 
+License: MIT
+
 Image:
 
 ![Screenshot of the website](https://brianrshort.github.io/day-planner-with-moment-js/Assets/Exampple.jpg)
